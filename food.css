@@ -3,126 +3,125 @@
 -grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) makes columns that auto-fit as many as possible depending on container width and min 220px
 */
 .card-grid{
-    display:grid;
-   grid-template-columns: repeat(auto-fit ,minmax(220px ,1fr));
-   gap:40px ;
-   width :100%;
-   max-width:900px;
-   }
-   
-   /* card:
-   -perspective creates a 3D space for children(card-inner)
-   -higher perspective value=more subtle 3D effect
-   */
-   .card{
-   perspective :1000px;
-   }
-   
-   /* card-inner:
-   -this contains the front and back sides
-   -transform-style:preserve-3d allows children to exist in 3D space
-   -transition:smooth rotation animation when flipped
-   -cursor:pointer to show it’s clickable
-   */
-   .card-inner{
-   width:100% ;
-   height :260px;
-   position :relative;
-   transform-style: preserve-3d ;
-   transition: transform 0.8s ease;
-   cursor:pointer;
-   }
-   
-   /* flip the card on hover:
-   -rotateY(180deg) spins card around vertical axis
-   -smooth due to transition on card-inner
-   */
-   .card:hover .card-inner{
-   transform:rotateY(180deg) ;
-   }
-   
-   /* card-front and card-back:
-   -both absolutely positioned to overlap each other
-   -border-radius:rounded corners
-   -display:flex+justify-content+align-items centers content
-   -backface-visibility:hidden hides the back side when not facing front
-   -padding+text-align centers text
-   */
-   .card-front,
-   .card-back{
-   position:absolute ;
-   width:100% ;
-   height:100%;
-   border-radius:25px ;
-   display:flex ;
-   justify-content:center ;
-   align-items :center ;
-   backface-visibility:hidden ;
-   padding:20px;
-   text-align:center ;
-   }
-   
-   /* card-front styles:
-   -teal/pink background depending on odd/even
-   -column layout:icon on top,text below
-   -gap between icon and text
-   */
-   .card-front{
-   background-color:#3B9797 ;
-   color:#132440;
-   flex-direction:column ;
-   gap:20px;
-   }
-   
-   /* icon on front side:
-   -bigger font size
-   */
-   .card-front i{
-   font-size:4rem ;
-   }
-   
-   /* text on front side:
-   -slightly bigger,spaced letters
-   */
-   .card-front span{
-   font-size:1.8rem ;
-   letter-spacing:2px ;
-   }
-   
-   /* card-back:
-   -rotated 180deg so it’s hidden behind front initially
-   -pink background/dark text
-   -font size and line-height for readability
-   */
-   .card-back{
-   background-color:#FDB5CE ;
-   color:#132440;
-   transform:rotateY(180deg) ;
-   font-size:1.2rem;
-   line-height:1.8 ;
-   }
-   
-   /* alternating card colors for visual variety:
-   -odd/even cards swap front/back colors so the grid looks playful
-   -front is teal/pink, back is opposite
-   */
-   .card:nth-child(odd) .card-front{
-   background-color:#FDB5CE ;
-   color:#132440 ;
-   }
-   
-   .card:nth-child(odd) .card-back{
-   background-color:#3B9797 ;
-   color:#FDB5CE;
-   }
-   
-   .card:nth-child(even) .card-front{
-   background-color:#3B9797 ;
-   color:#FDB5CE ;
-   }
-   
-   .card:nth-child(even) .card-back{
-   background-color:#FDB5CE ;
-   color:#132440 ;
-   }
-   
+display:grid;
+grid-template-columns: repeat(auto-fit ,minmax(220px ,1fr));
+gap:40px ;
+width :100%;
+max-width:900px;
+}
+
+/* card:
+-perspective creates a 3D space for children(card-inner)
+-higher perspective value=more subtle 3D effect
+*/
+.card{
+perspective :1000px;
+}
+
+/* card-inner:
+-this contains the front and back sides
+-transform-style:preserve-3d allows children to exist in 3D space
+-transition:smooth rotation animation when flipped
+-cursor:pointer to show it’s clickable
+*/
+.card-inner{
+width:100% ;
+height :260px;
+position :relative;
+transform-style: preserve-3d ;
+transition: transform 0.8s ease;
+cursor:pointer;
+}
+
+/* flip the card on hover:
+-rotateY(180deg) spins card around vertical axis
+-smooth due to transition on card-inner
+*/
+.card:hover .card-inner{
+transform:rotateY(180deg) ;
+}
+
+/* card-front and card-back:
+-both absolutely positioned to overlap each other
+-border-radius:rounded corners
+-display:flex+justify-content+align-items centers content
+-backface-visibility:hidden hides the back side when not facing front
+-padding+text-align centers text
+*/
+.card-front,
+.card-back{
+position:absolute ;
+width:100% ;
+height:100%;
+border-radius:25px ;
+display:flex ;
+justify-content:center ;
+align-items :center ;
+backface-visibility:hidden ;
+padding:20px;
+text-align:center ;
+}
+
+/* card-front styles:
+-teal/pink background depending on odd/even
+-column layout:icon on top,text below
+-gap between icon and text
+*/
+.card-front{
+background-color:#3B9797 ;
+color:#132440;
+flex-direction:column ;
+gap:20px;
+}
+
+/* icon on front side:
+-bigger font size
+*/
+.card-front i{
+font-size:4rem ;
+}
+
+/* text on front side:
+-slightly bigger,spaced letters
+*/
+.card-front span{
+font-size:1.8rem ;
+letter-spacing:2px ;
+}
+
+/* card-back:
+-rotated 180deg so it’s hidden behind front initially
+-pink background/dark text
+-font size and line-height for readability
+*/
+.card-back{
+background-color:#FDB5CE ;
+color:#132440;
+transform:rotateY(180deg) ;
+font-size:1.2rem;
+line-height:1.8 ;
+}
+
+/* alternating card colors for visual variety:
+-odd/even cards swap front/back colors so the grid looks playful
+-front is teal/pink, back is opposite
+*/
+.card:nth-child(odd) .card-front{
+background-color:#FDB5CE ;
+color:#132440 ;
+}
+
+.card:nth-child(odd) .card-back{
+background-color:#3B9797 ;
+color:#FDB5CE;
+}
+
+.card:nth-child(even) .card-front{
+background-color:#3B9797 ;
+color:#FDB5CE ;
+}
+
+.card:nth-child(even) .card-back{
+background-color:#FDB5CE ;
+color:#132440 ;
+}

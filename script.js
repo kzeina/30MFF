@@ -16,30 +16,30 @@ const positions=[
 //check if we actually have drink items and message box before running
 if(drinkItems.length>0 && messageBox){
 
-//loop through each drink item
-drinkItems.forEach(item=>{
+    //loop through each drink item
+    drinkItems.forEach(item=>{
 
-//listen for click events on each drink
-item.addEventListener('click',()=>{
+    //listen for click events on each drink
+    item.addEventListener('click',()=>{
 
-//get snarky message from data-message attribute
-const message=item.getAttribute('data-message');
+    //get snarky message from data-message attribute
+    const message=item.getAttribute('data-message');
 
-//reset message box classes so old positions are removed
-messageBox.className='message-box';
+    //reset message box classes so old positions are removed
+    messageBox.className='message-box';
 
-//pick random position class for message
-const randomPosition=positions[Math.floor(Math.random()*positions.length)];
-messageBox.classList.add(randomPosition);
+    //pick random position class for message
+    const randomPosition=positions[Math.floor(Math.random()*positions.length)];
+    messageBox.classList.add(randomPosition);
 
-//set message text inside box
-messageBox.textContent=message;
+    //set message text inside box
+    messageBox.textContent=message;
 
-//remove 'hidden' class to show message
-messageBox.classList.remove('hidden');
+    //remove 'hidden' class to show message
+    messageBox.classList.remove('hidden');
 
-//hide message again after 3 seconds
-setTimeout(()=>{messageBox.classList.add('hidden');},3000);
+    //hide message again after 3 seconds
+    setTimeout(()=>{messageBox.classList.add('hidden');},3000);
 
 });
 });
@@ -76,26 +76,26 @@ const messages=[
 //make sure button exists before adding listener
 if(btn){
 
-//listen for clicks on open fridge button
-btn.addEventListener('click',()=>{
+    //listen for clicks on open fridge button
+    btn.addEventListener('click',()=>{
 
-//increment opens counter each click
-opens++;
-opensEl.textContent=opens;
+        //increment opens counter each click
+        opens++;
+        opensEl.textContent=opens;
 
-//30% chance to increase items eaten
-if(Math.random()<0.3){items++;itemsEl.textContent=items;}
+        //30% chance to increase items eaten
+        if(Math.random()<0.3){items++;itemsEl.textContent=items;}
 
-//40% chance to increase regrets counter
-if(Math.random()<0.4){regrets++;regretsEl.textContent=regrets;}
+        //40% chance to increase regrets counter
+        if(Math.random()<0.4){regrets++;regretsEl.textContent=regrets;}
 
-//pick random message from array
-const randomMessage=messages[Math.floor(Math.random()*messages.length)];
-messageEl.textContent=randomMessage;
+        //pick random message from array
+        const randomMessage=messages[Math.floor(Math.random()*messages.length)];
+        messageEl.textContent=randomMessage;
 
-//simple button click animation
-btn.style.transform='scale(0.95)';
-setTimeout(()=>{btn.style.transform='scale(1)';},100);
+        //simple button click animation
+        btn.style.transform='scale(0.95)';
+        setTimeout(()=>{btn.style.transform='scale(1)';},100);
 
-});
+    });
 }

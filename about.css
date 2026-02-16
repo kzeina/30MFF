@@ -4,156 +4,155 @@
 -align-items:flex-start aligns columns to top
 */
 .about-content{
-    display:flex;
-    gap:60px ;
-    max-width:1200px ;
-    margin:0 auto;
-    padding:20px;
-    align-items:flex-start;
-    }
-    
-    /* description column:
-    -left side
-    -flex:1 makes it take equal space as stats column
-    -text-align:left keeps text aligned to left side
-    */
-    .description{
-    flex:1 ;
-    text-align:left ;
-    }
-    
-    /* heading in description */
-    .description h2{
-    color:#3B9797 ;
-    font-size:2rem;
-    margin-bottom:20px ;
-    }
-    
-    /* paragraphs in description */
-    .description p{
-    font-size:1.1rem ;
-    line-height:1.8 ;
-    margin-bottom:20px ;
-    color:#FDB5CE;
-    }
-    
-    /* stats-container:
-    -right column
-    -gradient background
-    */
-    .stats-container{
-    flex:1 ;
-    background:linear-gradient(135deg,#16476A 0%,#1a5377 100%);
-    padding:30px ;
-    border-radius:20px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.5);
-    text-align:center ;
-    }
-    
-    /* heading in stats container */
-    .stats-container h2{
-    color:#FDB5CE;
-    font-size:1.8rem;
-    margin-bottom:30px ;
-    }
-    
-    /* stats-grid:
-    -grid layout for 3 stats (opens, items, regrets)
-    -grid-template-columns:3 equal columns
-    -gap:spacing between boxes
-    -margin-bottom:space below grid
-    */
-    .stats-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    margin-bottom:30px ;
-    }
-    
-    /* individual stat box:
-    -flex column to stack number and label
-    */
-    .stat-box{
-    background:linear-gradient(180deg,#3B9797 0%,#2d7575 100%);
-    padding:20px ;
-    border-radius:15px ;
-    border:3px solid #132440 ;
-    display:flex ;
-    flex-direction:column ;
-    gap:10px ;
-    }
-    
-    /* stat number:
-    -big bold number
-    -color for contrast
-    */
-    .stat-number{
-    font-size:3rem;
-    color:#FDB5CE ;
-    font-weight:bold ;
-    }
-    
-    /* stat label:
-    -small uppercase text below number
-    -letter-spacing adds space between letters
-    */
-    .stat-label{
-    font-size:0.9rem ;
-    color:#FDB5CE;
-    text-transform:uppercase;
-    letter-spacing:1px ;
-    }
-    
-    /* INTERACTIVE BUTTON */
-    /* open-fridge-btn:
-    -styled button
-    -background+color+padding+border-radius
-    -cursor:pointer shows clickable
-    -transition:smooth hover animation
-    */
-    #open-fridge-btn{
-    background:#FDB5CE ;
-    color:#132440;
-    border:none ;
-    padding:15px 40px ;
-    font-size:1.2rem;
-    font-family:'Bungee',cursive;
-    border-radius:15px ;
-    cursor:pointer ;
-    transition:all 0.3s ease;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
-    margin-bottom:20px ;
-    }
-    
-    /* hover effect for button:
-    -swaps colors
-    -lifts button slightly
-    -stronger box-shadow to look like floating
-    */
-    #open-fridge-btn:hover{
-    background:#3B9797 ;
-    color:#FDB5CE;
-    transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.4) ;
-    }
-    
-    /* button press effect:
-    -scale down slightly when clicked
-    */
-    #open-fridge-btn:active{
-    transform:scale(0.95);
-    }
-    
-    /* encouragement text:
-    -text below button changes when clicked
-    -min-height prevents layout jump
-    -italic style for fun
-    */
-    .encouragement{
-    color:#3B9797 ;
-    font-size:1rem ;
-    margin-top:10px ;
-    font-style:italic ;
-    min-height:30px ;
-    }
-    
+display:flex;
+gap:60px ;
+max-width:1200px ;
+margin:0 auto;
+padding:20px;
+align-items:flex-start;
+}
+
+/* description column:
+-left side
+-flex:1 makes it take equal space as stats column
+-text-align:left keeps text aligned to left side
+*/
+.description{
+flex:1 ;
+text-align:left ;
+}
+
+/* heading in description */
+.description h2{
+color:#3B9797 ;
+font-size:2rem;
+margin-bottom:20px ;
+}
+
+/* paragraphs in description */
+.description p{
+font-size:1.1rem ;
+line-height:1.8 ;
+margin-bottom:20px ;
+color:#FDB5CE;
+}
+
+/* stats-container:
+-right column
+-gradient background
+*/
+.stats-container{
+flex:1 ;
+background:linear-gradient(135deg,#16476A 0%,#1a5377 100%);
+padding:30px ;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
+text-align:center ;
+}
+
+/* heading in stats container */
+.stats-container h2{
+color:#FDB5CE;
+font-size:1.8rem;
+margin-bottom:30px ;
+}
+
+/* stats-grid:
+-grid layout for 3 stats (opens, items, regrets)
+-grid-template-columns:3 equal columns
+-gap:spacing between boxes
+-margin-bottom:space below grid
+*/
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-bottom:30px ;
+}
+
+/* individual stat box:
+-flex column to stack number and label
+*/
+.stat-box{
+background:linear-gradient(180deg,#3B9797 0%,#2d7575 100%);
+padding:20px ;
+border-radius:15px ;
+border:3px solid #132440 ;
+display:flex ;
+flex-direction:column ;
+gap:10px ;
+}
+
+/* stat number:
+-big bold number
+-color for contrast
+*/
+.stat-number{
+font-size:3rem;
+color:#FDB5CE ;
+font-weight:bold ;
+}
+
+/* stat label:
+-small uppercase text below number
+-letter-spacing adds space between letters
+*/
+.stat-label{
+font-size:0.9rem ;
+color:#FDB5CE;
+text-transform:uppercase;
+letter-spacing:1px ;
+}
+
+/* INTERACTIVE BUTTON */
+/* open-fridge-btn:
+-styled button
+-background+color+padding+border-radius
+-cursor:pointer shows clickable
+-transition:smooth hover animation
+*/
+#open-fridge-btn{
+background:#FDB5CE ;
+color:#132440;
+border:none ;
+padding:15px 40px ;
+font-size:1.2rem;
+font-family:'Bungee',cursive;
+border-radius:15px ;
+cursor:pointer ;
+transition:all 0.3s ease;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+margin-bottom:20px ;
+}
+
+/* hover effect for button:
+-swaps colors
+-lifts button slightly
+-stronger box-shadow to look like floating
+*/
+#open-fridge-btn:hover{
+background:#3B9797 ;
+color:#FDB5CE;
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,0.4) ;
+}
+
+/* button press effect:
+-scale down slightly when clicked
+*/
+#open-fridge-btn:active{
+transform:scale(0.95);
+}
+
+/* encouragement text:
+-text below button changes when clicked
+-min-height prevents layout jump
+-italic style for fun
+*/
+.encouragement{
+color:#3B9797 ;
+font-size:1rem ;
+margin-top:10px ;
+font-style:italic ;
+min-height:30px ;
+}

@@ -3,28 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food</title>
+  <title>30MFF Website Food Page</title>
 
+  <!-- using bungee font from google -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+  <!-- link to css files -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="food.css">
 </head>
 
 <body>
 
+  <!-- top navigation bar -->
   <header class="top-bar">
-
     <nav class="tabs">
       <a href="index.html">Home</a>
+      <a href="video.html">Video</a>
       <a href="food.html" class="active">Food</a>
       <a href="drinks.html">Drinks</a>
-      <a href="condiments.html">Condiments</a>
-      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
     </nav>
   </header>
 
   <main>
-    <h1>Food</h1>
-    <p>This page will contain food-related content.</p>
+    <!-- main title-->
+    <h1>what are you craving?</h1>
+    <!-- instructions-->
+    <p>flip a card</p>
+    
+    <!-- grid of 6 flip cards -->
+    <section class="card-grid">
+
+      <!-- each card -->
+      <div class="card">
+        <!-- card-inner flips in 3D when hovered -->
+        <div class="card-inner">
+          <div class="card-front">
+            <i class="fa-solid fa-box"></i>
+            <span>leftovers</span>
+          </div>
+          <div class="card-back">
+            mystery tupperware<br>
+            3-day-old pizza<br>
+            half a burrito<br>
+            cold pasta
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <i class="fa-solid fa-cheese"></i>
+            <span>cheese</span>
+          </div>
+          <div class="card-back">
+            string cheese<br>
+            shredded cheese<br>
+            sad slice<br>
+            cheese stick
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <i class="fa-solid fa-bread-slice"></i>
+            <span>bread things</span>
+          </div>
+          <div class="card-back">
+            plain bread<br>
+            stale bagel<br>
+            tortilla roll-up<br>
+            end pieces
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <i class="fa-solid fa-egg"></i>
+            <span>lazy protein</span>
+          </div>
+          <div class="card-back">
+            cold deli meat<br>
+            hard boiled eggs<br>
+            lunch meat rollup<br>
+            sad chicken breast
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <i class="fa-solid fa-lemon"></i>
+            <span>produce</span>
+          </div>
+          <div class="card-back">
+            wilting lettuce<br>
+            baby carrots<br>
+            lonely apple<br>
+            questionable berries
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <i class="fa-solid fa-ice-cream"></i>
+            <span>give up</span>
+          </div>
+          <div class="card-back">
+            ice cream<br>
+            frozen waffles<br>
+            pizza rolls<br>
+            cereal (again)
+          </div>
+        </div>
+      </div>
+      
+    </section>
   </main>
 
 </body>

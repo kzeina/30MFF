@@ -3,33 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>30MFF Website</title>
+  <title>30MFF Website Home Page</title>
 
+  <!-- using bungee font from google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+  <!-- link to css file -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
 
+  <!-- navigation bar with tabs -->
   <header class="top-bar">
-    
     <nav class="tabs">
+      <!-- current page -->
       <a href="index.html" class="active">Home</a>
+      <a href="video.html">Video</a>
       <a href="food.html">Food</a>
       <a href="drinks.html">Drinks</a>
-      <a href="condiments.html">Condiments</a>
-      <a href="video.html">Video</a>
+      <a href="about.html">About</a>
     </nav>
-
-    <input type="search" placeholder="Search">
   </header>
 
   <main>
-    <h1>Are you hungry?</h1>
-    <h1>Are you thirsty?</h1>
-    <h1>Do you know what you want?</h1>
-  </main>
+    <!-- main question/title -->
+    <h1>How many times are you going to open the fridge before picking something?</h1>
 
-  <script src="script.js"></script>
+    <!-- layout with taunts on left and right, fridge image in the middle -->
+    <div class="content-wrapper">
+      
+      <!-- left side messages -->
+      <div class="taunts-left">
+        <div class="taunt-bubble">Are you hungry?</div>
+        <div class="taunt-bubble">Are you thirsty?</div>
+        <div class="taunt-bubble">Do you know what you want?</div>
+        <div class="taunt-bubble">Why are you here again?</div>
+        <div class="taunt-bubble">Can't decide?</div>
+      </div>
+
+      <!-- fridge image in the center -->
+      <div class="center-image">
+        <img src="whatsinmyfridge.png" alt="What's in my fridge cartoon">
+      </div>
+
+      <!-- right side messages -->
+      <div class="taunts-right">
+        <div class="taunt-bubble">Is this your third time today?</div>
+        <div class="taunt-bubble">Still can't decide?</div>
+        <div class="taunt-bubble">Just pick something already.</div>
+        <div class="taunt-bubble">Nothing looks good, does it?</div>
+        <div class="taunt-bubble">Maybe check the tabs?</div>
+      </div>
+      
+    </div>
+  </main>
 </body>
 </html>

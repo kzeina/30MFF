@@ -3,35 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video</title>
+  <title>30MFF Website - Video</title>
 
+  
+  <!-- using bungee font from google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+  <!-- link to css file -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
 
+  <!-- top navigation bar -->
   <header class="top-bar">
-
     <nav class="tabs">
       <a href="index.html">Home</a>
+      <a href="video.html" class="active">Video</a>
       <a href="food.html">Food</a>
       <a href="drinks.html">Drinks</a>
-      <a href="condiments.html">Condiments</a>
-      <a href="video.html" class="active">Video</a>
+      <a href="about.html">About</a>
     </nav>
   </header>
 
   <main>
-    <h1 class="section-title">Video</h1>
-
+    <!-- page heading -->
+    <h1 class="section-title">video</h1>
+    
+    <!-- video embedding-->
     <div class="video-container">
-      <iframe
-        src="https://drive.google.com/file/d/1ZqMznpvxpXxG-bRzoDNIop3WL5Bxac1n/preview"
-        allow="autoplay"
+      <iframe 
+        width="640" 
+        height="480" 
+        src="https://www.youtube.com/embed/TdwwN3__4wY?si=ThSd5oNB9_OQhaBM" 
+        title="youtube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
         allowfullscreen>
       </iframe>
     </div>
+
   </main>
 
 </body>

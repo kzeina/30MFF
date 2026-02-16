@@ -1,75 +1,247 @@
+/* apply to everything (*) on the page:
+   -remove default margin/padding so browsers don't add extra space
+   -box-sizing: border-box makes width/height include padding & border (easier to size elements)
+   when you remove the the code lines for margin, padding and box-sizing, the website looks off
+   -set default font to Bungee for the whole site
+*/
+* {
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family:'Bungee',cursive;
+}
+
+/* body styles:
+   -background-color: dark blue for the whole page
+   -color: default text color (pink)
+   -min-height: 100vh ensures body fills full screen height
+   -display: flex enables flex layout
+   this basically is used for 1 dimensional layout (rows or columns)
+   -flex-direction: column stacks header, main, footer vertically
+*/
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: black;
+  background-color:#132440;
+  color:#FDB5CE;
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
 }
 
-
+/*NAVIGATION BAR*/
+/* top-bar container:
+   -display: flex makes children (tabs) arranged in a row
+   -justify-content: space-between pushes items to edges
+   -align-items: center vertically centers items
+   -padding: space inside the nav bar
+*/
 .top-bar {
+  background-color:#16476A;
   display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 1.5rem 2rem;
+  justify-content:space-between;
+  align-items :center;
+  padding: 20px 40px;
 }
 
-
-.tabs {
-  display: flex;
-  gap: 1.5rem;
-}
-
+/* links inside the navigation bar:
+   -remove underline
+   -set color
+   -add spacing between links
+   -smooth transition for hover effects
+*/
 .tabs a {
-  padding: 0.8rem 2rem;
-  border-radius: 999px;
-  border: 2px solid black;
-  background-color: #bfbfbf;
   text-decoration: none;
-  color: black;
+  color: #FDB5CE;
+  margin-right: 25px;
+  font-size:18px;
+  transition: 0.3s ease;
 }
 
+/* hover effect for links:
+   -change color
+   -scale slightly bigger
+*/
 .tabs a:hover {
-  background-color: #9e9e9e;
+  color: #3B9797;
+  transform:scale(1.1);
 }
 
-
+/* current page link highlighted */
 .tabs a.active {
-  background-color: #8e8e8e;
+  color: #3B9797;
 }
 
 
-input[type="search"] {
-  margin-left: auto;
-  padding: 0.6rem 1rem;
-  border-radius: 999px;
-  border: 1.5px solid black;
-}
-
-
+/* main container:
+   -flex: 1 allows main to grow and fill remaining vertical space
+   -display: flex and flex-direction: column stacks children vertically
+   -align-items: center horizontally centers content
+   -text-align: center centers text
+   -padding for spacing inside main
+*/
 main {
-  padding: 2rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-}
-
-
-.section-title {
   text-align: center;
+  padding: 40px;
 }
+
+/* main heading styles:
+   -big font-size for the heading
+   -margin-bottom adds space under heading
+   -letter-spacing spreads letters out a bit
+   -transition smooths hover effects
+*/
+main h1 {
+  font-size: 3rem;
+  margin-bottom:40px;
+  letter-spacing: 2px;
+  transition:0.3s ease;
+}
+
+/* hover effect on heading:
+   -changes color
+   -slightly scales up
+*/
+main h1:hover {
+  color: #3B9797;
+  transform:scale(1.05);
+}
+
+/* main paragraph styles:
+   -line-height improves readability
+   -margin-bottom adds spacing below
+*/
+main p {
+  font-size: 1.1rem;
+  line-height:1.8;
+  margin-bottom: 20px;
+  color:#FDB5CE;
+}
+
+/*INDEX PAGE*/
+/* content-wrapper:
+   -flex container with left bubbles, center image, right bubbles
+   -display: flex aligns children in a row
+   -justify-content: center horizontally centers all columns
+   -align-items: center vertically centers them
+   -gap: space between columns
+   -max-width: limits container width
+   -margin: center container horizontally with spacing
+   -padding: space inside container
+*/
+.content-wrapper {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+  max-width: 1200px;
+  margin:30px auto;
+  padding: 0 20px;
+}
+
+/* center-image:
+   -flex-shrink: 0 prevents it from shrinking smaller than its natural size
+*/
+.center-image {
+  flex-shrink:0;
+}
+
+/* center image styling:
+   -max-width keeps image from getting too big
+   -width 100% makes it responsive
+   -height auto keeps aspect ratio
+   -border-radius rounds corners
+   -box-shadow adds shadow
+*/
+.center-image img {
+  max-width:500px;
+  width: 100%;
+  height:auto;
+  border-radius:15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* taunts-left and taunts-right:
+   -flex container with column direction to stack bubbles vertically
+   -gap adds space between bubbles
+   -max-width prevents columns from being too wide
+*/
+.taunts-left,
+.taunts-right {
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  max-width:200px;
+}
+
+/* individual bubble:
+   -background and text color
+   -padding inside bubble
+   -border-radius for round shape
+   -box-shadow for 3d effect
+   -transition for smooth hover
+   -animation floatBubble moves bubbles up and down
+*/
+.taunt-bubble {
+  background:#FDB5CE;
+  color: #132440;
+  padding:15px 20px;
+  border-radius:20px;
+  font-family:'Bungee',cursive;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  animation: floatBubble 4s ease-in-out infinite;
+}
+
+/* alternate bubble colors and animation delay for variety */
+.taunt-bubble:nth-child(even) {
+  animation-delay:0.5s;
+  background:#3B9797;
+  color:#FDB5CE;
+}
+
+.taunt-bubble:nth-child(3n) {
+  animation-delay:1s;
+}
+
+/* hover effect on bubble:
+   -slightly bigger and rotated
+*/
+.taunt-bubble:hover {
+  transform:scale(1.05) rotate(2deg);
+}
+
+/* keyframes animation floatBubble:
+   -moves bubble up 10px then back down repeatedly
+*/
+@keyframes floatBubble {
+  0%, 100% {
+    transform:translateY(0);
+  }
+  50% {
+    transform:translateY(-10px);
+  }
+}
+
+/* VIDEO PAGE */
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
 }
 
 .video-container iframe {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: 0;
 }
-

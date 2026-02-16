@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30MFF Website About Page</title>
+
+  <!-- using bungee font from google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+  <!-- link to css files -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+  <!-- top navigation bar -->
+  <header class="top-bar">
+    <nav class="tabs">
+      <a href="index.html">Home</a>
+      <a href="video.html">Video</a>
+      <a href="food.html">Food</a>
+      <a href="drinks.html">Drinks</a>
+      <!-- highlight current page -->
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- main title -->
+    <h1>about this fridge</h1>
+    
+    <!-- layout with two columns: description on left, interactive stats on right -->
+    <div class="about-content">
+      
+      <!-- description text explaining the project -->
+      <div class="description">
+        <h2>what is this?</h2>
+        <p>a digital version of your daily fridge struggle: standing in front of the fridge, 
+        door open, staring at the same food you ignored 10 minutes ago, hoping 
+        something new magically appeared.</p>
+        
+        <p>this site is your brutally honest companion for when you're 
+        hungry but nothing looks good, thirsty but water seems too boring, and too 
+        indecisive to just pick something already.</p>
+
+        <p>navigate the tabs to explore your options (or lack thereof). click items 
+        to get the judgment you deserve. the fridge doesn't care about your feelings.</p>
+      </div>
+
+      <!-- interactive stats section -->
+      <div class="stats-container">
+        <h2>your fridge stats today</h2>
+        
+        <!-- grid showing opens, items eaten, regrets -->
+        <div class="stats-grid">
+          <div class="stat-box">
+            <span class="stat-number" id="opens">0</span>
+            <span class="stat-label">times opened</span>
+          </div>
+          
+          <div class="stat-box">
+            <span class="stat-number" id="items">0</span>
+            <span class="stat-label">items eaten</span>
+          </div>
+          
+          <div class="stat-box">
+            <span class="stat-number" id="regrets">0</span>
+            <span class="stat-label">regretful choices</span>
+          </div>
+        </div>
+
+        <!-- button to simulate opening the fridge again -->
+        <button id="open-fridge-btn">open fridge again</button>
+        <!-- little encouragement message -->
+        <p class="encouragement" id="message">go ahead, maybe something new appeared...</p>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- link to js file that handles stats and interactions -->
+  <script src="script.js"></script>
+</body>
+</html>
